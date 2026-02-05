@@ -45,7 +45,7 @@ This is my first GitHub Pages site. </h1>
 
         section {
             padding: 120px 20px; 
-            max-width: 900px; 
+            max-width: 1300px; 
             margin: auto;
         }
 
@@ -74,12 +74,29 @@ This is my first GitHub Pages site. </h1>
             border-top: 1px solid #f2f2f2; 
         }
 
+
         .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     margin-top: 40px;
 }
+
+/* Tablet */
+@media (max-width: 1000px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+        
 
 .project-card {
     background: #ffffff;

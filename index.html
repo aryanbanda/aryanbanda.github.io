@@ -73,6 +73,45 @@ This is my first GitHub Pages site. </h1>
         section:not(:first-of-type) { 
             border-top: 1px solid #f2f2f2; 
         }
+
+        .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    margin: 10px 0 8px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.project-card p {
+    font-size: 15px;
+    color: #555;
+}
+
+        
     </style>
 </head>
 
@@ -101,10 +140,33 @@ This is my first GitHub Pages site. </h1>
         <p>Write a short introduction here about your son — his interests, goals, academic focus, and what he enjoys learning.</p>
     </section>
 
+
     <section id="projects">
-        <h2>My Work</h2>
-        <p>Add project descriptions here. Each project can include a title, summary, skills used, and images or links.</p>
-    </section>
+    <h2>Projects</h2>
+
+    <div class="projects-grid">
+
+        <div class="project-card">
+            <img src="images/project1.jpg" alt="Project 1">
+            <h3>Project Title 1</h3>
+            <p>Short description of the project. What it does, what Aryan learned, and why it matters.</p>
+        </div>
+
+        <div class="project-card">
+            <img src="images/project2.jpg" alt="Project 2">
+            <h3>Project Title 2</h3>
+            <p>Short description of the project. Add a photo or screenshot for visual appeal.</p>
+        </div>
+
+        <div class="project-card">
+            <img src="images/project3.jpg" alt="Project 3">
+            <h3>Project Title 3</h3>
+            <p>Short description of the project. You can add as many cards as you want.</p>
+        </div>
+
+    </div>
+</section>
+
 
     <section id="awards">
         <h2>Awards & Achievements</h2>

@@ -7,13 +7,14 @@ This is my first GitHub Pages site. </h1>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aryan Portfolio</title>
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #222;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: #222;            
         }
 
         nav {            
@@ -23,14 +24,15 @@ This is my first GitHub Pages site. </h1>
            /* background: #e9f2ff; /* very light blue */
             background: linear-gradient(to right, #ffffff, #f0f4ff); /* light gradient */
          /*   background: linear-gradient(to right, #0077ff, #00c6ff); /* bold gradient */
+        /*    background: #ffffff; */
             backdrop-filter: blur(8px); 
             border-bottom: 1px solid #eee; 
-            padding: 12px 0; 
+            padding: 14px 0; 
             z-index: 1000; 
             display: flex; 
             justify-content: center; 
             gap: 30px;
-            
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);   
         }
 
         nav a {
@@ -38,22 +40,38 @@ This is my first GitHub Pages site. </h1>
         }
 
         nav a:hover { 
-            color: #0077ff; 
+            color: #0066ff; 
         }
 
         section {
-            padding: 80px 20px;
-            max-width: 900px;
+            padding: 120px 20px; 
+            max-width: 900px; 
             margin: auto;
         }
 
-        h1, h2 {
-            font-weight: 600;
+        h1 { 
+            font-size: 42px; 
+            font-weight: 700; 
+            margin-bottom: 10px; 
+        } 
+        
+        h2 { 
+            font-size: 28px; 
+            font-weight: 600; 
+            margin-bottom: 20px; 
         }
 
         .hero {
-            padding-top: 120px;
+            padding-top: 180px; 
             text-align: center;
+        }
+        .profile { 
+            width: 220px; 
+            border-radius: 50%; 
+            margin-top: 20px;
+        }
+        section:not(:first-of-type) { 
+            border-top: 1px solid #f2f2f2; 
         }
     </style>
 </head>
@@ -72,7 +90,10 @@ This is my first GitHub Pages site. </h1>
     <section id="home" class="hero">
         <h1>Aryan Banda</h1>
         <p>Student • Explorer • Creator</p>
-        <img src="images/Aryan.jpeg" width="300" height="300">
+        <img src="images/Aryan.jpeg" class="profile">
+
+        
+        
     </section>
 
     <section id="about">

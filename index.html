@@ -34,30 +34,33 @@ This is my first GitHub Pages site. </h1>
             gap: 30px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);   
         }
-
+        
         /* NAV BAR */
-.navbar {
+
+        .navbar {
+  background-color: white;
+  border-bottom: 1px solid #eee;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* LIMIT WIDTH */
+.nav-container {
+  max-width: 1200px;   /* adjust this number to control width */
+  margin: 0 auto;
+  padding: 22px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 22px 40px;
-  background-color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  border-bottom: 1px solid #eee;
 }
 
-/* LEFT SIDE */
 .brand {
   font-size: 22px;
   font-weight: 700;
-  letter-spacing: 0.5px;
 }
 
-/* CENTER LINKS */
 .nav-links {
   list-style: none;
   display: flex;
@@ -68,14 +71,8 @@ This is my first GitHub Pages site. </h1>
   text-decoration: none;
   color: black;
   font-weight: 500;
-  transition: 0.2s ease;
 }
 
-.nav-links a:hover {
-  opacity: 0.6;
-}
-
-/* RIGHT SIDE CONTACT BUTTON */
 .contact-btn {
   padding: 10px 20px;
   border: 1px solid black;
@@ -83,16 +80,7 @@ This is my first GitHub Pages site. </h1>
   text-decoration: none;
   color: black;
   font-weight: 500;
-  transition: 0.25s ease;
 }
-
-.contact-btn:hover {
-  background-color: black;
-  color: white;
-}
-
-        
-
         
         nav a {
             text-decoration: none; color: #333; font-weight: 600; font-size: 15px; padding: 6px 10px; transition: color 0.2s ease;
@@ -199,26 +187,16 @@ This is my first GitHub Pages site. </h1>
 <body>
 
     <!-- NAV BAR --> 
-
-    <nav class="navbar"> 
+   
+<nav class="navbar"> 
+    <div class="nav-container"> 
         <div class="nav-left"> <span class="brand">Aryan Banda</span> </div> 
         <ul class="nav-links"> <li><a href="#home">Home</a></li> <li><a href="#projects">Projects</a></li> <li><a href="#research">Research</a></li> <li><a href="#about">About</a></li> </ul> 
         <div class="nav-right"> <a href="#contact" class="contact-btn">Contact</a> </div> 
-    </nav>
-    <!-- 
-    <nav class="navbar"> <div class="nav-left"> <span class="brand">Aryan Banda</span> </div> <div class="nav-right"> <a href="#contact" class="contact-btn">Contact</a> </div> </nav>
+    </div> 
+</nav>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">My Work</a>
-        <a href="#awards">Awards</a>
-        <a href="https://www.linkedin.com/in/aryanbanda/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    -->
-
+    
     <section id="home" class="hero">
         <h1>Aryan Banda</h1>
         <p>Student • Explorer • Creator</p>

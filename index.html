@@ -35,27 +35,47 @@ This is my first GitHub Pages site. </h1>
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);   
         }
 
-/* NAV BAR STYLING */
+        /* NAV BAR */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 22px 40px;
   background-color: white;
-  position: fixed;   /* sticks to top */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;     /* stays above content */
-  border-bottom: 1px solid #eee; /* subtle line like the reference */
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
 }
 
+/* LEFT SIDE */
 .brand {
   font-size: 22px;
   font-weight: 700;
   letter-spacing: 0.5px;
 }
 
+/* CENTER LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.6;
+}
+
+/* RIGHT SIDE CONTACT BUTTON */
 .contact-btn {
   padding: 10px 20px;
   border: 1px solid black;
@@ -71,6 +91,7 @@ This is my first GitHub Pages site. </h1>
   color: white;
 }
 
+        
 
         
         nav a {
@@ -177,7 +198,15 @@ This is my first GitHub Pages site. </h1>
 
 <body>
 
-    <!-- NAV BAR --> <nav class="navbar"> <div class="nav-left"> <span class="brand">Aryan Banda</span> </div> <div class="nav-right"> <a href="#contact" class="contact-btn">Contact</a> </div> </nav>
+    <!-- NAV BAR --> 
+
+    <nav class="navbar"> 
+        <div class="nav-left"> <span class="brand">Aryan Banda</span> </div> 
+        <ul class="nav-links"> <li><a href="#home">Home</a></li> <li><a href="#projects">Projects</a></li> <li><a href="#research">Research</a></li> <li><a href="#about">About</a></li> </ul> 
+        <div class="nav-right"> <a href="#contact" class="contact-btn">Contact</a> </div> 
+    </nav>
+    <!-- 
+    <nav class="navbar"> <div class="nav-left"> <span class="brand">Aryan Banda</span> </div> <div class="nav-right"> <a href="#contact" class="contact-btn">Contact</a> </div> </nav>
 
     <nav>
         <a href="#home">Home</a>
@@ -187,6 +216,8 @@ This is my first GitHub Pages site. </h1>
         <a href="https://www.linkedin.com/in/aryanbanda/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="#contact">Contact</a>
     </nav>
+
+    -->
 
     <section id="home" class="hero">
         <h1>Aryan Banda</h1>

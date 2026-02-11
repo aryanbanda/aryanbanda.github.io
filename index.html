@@ -35,8 +35,42 @@ This is my first GitHub Pages site. </h1>
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);   
         }
 
-.navbar { display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; background-color: #fff; } 
-        .brand { font-size: 22px; font-weight: 700; }
+/* NAV BAR STYLING */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 40px;
+  background-color: white;
+  position: fixed;   /* sticks to top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;     /* stays above content */
+  border-bottom: 1px solid #eee; /* subtle line like the reference */
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.contact-btn {
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 4px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+.contact-btn:hover {
+  background-color: black;
+  color: white;
+}
+
 
         
         nav a {
@@ -142,6 +176,8 @@ This is my first GitHub Pages site. </h1>
 </head>
 
 <body>
+
+    <!-- NAV BAR --> <nav class="navbar"> <div class="nav-left"> <span class="brand">Aryan Banda</span> </div> <div class="nav-right"> <a href="#contact" class="contact-btn">Contact</a> </div> </nav>
 
     <nav>
         <a href="#home">Home</a>

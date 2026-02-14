@@ -9,7 +9,7 @@ body {
 .home-hero { 
     height: 90vh; /* big like the reference site */ 
     background-image: url('../images/Aryan.jpeg'); /* replace with your image */ 
-    background-size: cover; background-position: center; background-repeat: no-repeat; margin-top: 80px; /* prevents overlap with fixed nav bar */ 
+    background-size: cover; background-position: center; background-repeat: no-repeat; margin-top: 0px; /* prevents overlap with fixed nav bar */ 
 }
 
 nav {            
@@ -31,9 +31,11 @@ nav {
 }
         
 /* OUTER NAV BAR */
+
 .navbar {
-  background-color: white;
-  border-bottom: 1px solid #eee;
+  background-color: rgba(255, 255, 255, 0.6); 
+    backdrop-filter: blur(6px); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   position: fixed;
   top: 0;
   width: 100%;

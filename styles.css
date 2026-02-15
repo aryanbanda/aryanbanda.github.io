@@ -48,6 +48,9 @@ section:not(.home-hero) {
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(6px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+    line-height: var(--navbar-height); /* forces exact height */
+    overflow: hidden; /* prevents stretching */
 }
 
 /* Slim, clean nav bar */
@@ -61,7 +64,7 @@ section:not(.home-hero) {
 }
 
 .brand {
-    font-size: 22px;
+    font-size: 18px; /* reduced to fit 60px height */
     font-weight: 700;
 }
 
@@ -85,7 +88,7 @@ section:not(.home-hero) {
 }
 
 .contact-btn {
-    padding: 8px 16px;
+    padding: 6px 14px;
     border: 1px solid black;
     border-radius: 4px;
     transition: 0.25s ease;

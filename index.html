@@ -84,7 +84,7 @@
         </div>
     </section>
 
-    <!-- RESEARCH (optional but recommended) -->
+    <!-- RESEARCH -->
     <section id="research">
         <h2>Research</h2>
         <p>Coming soon.</p>
@@ -105,6 +105,18 @@
             You can add an email or a simple contact form here.
         </p>
     </section>
+
+    <!-- AUTO‑HEIGHT FIX (prevents overlap forever) -->
+    <script>
+        function updateNavbarHeight() {
+            const nav = document.querySelector('.navbar');
+            const height = nav.offsetHeight;
+            document.documentElement.style.setProperty('--navbar-height', height + 'px');
+        }
+
+        window.addEventListener('load', updateNavbarHeight);
+        window.addEventListener('resize', updateNavbarHeight);
+    </script>
 
 </body>
 </html>

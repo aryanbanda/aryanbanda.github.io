@@ -1,209 +1,122 @@
-/* --------------------------------------------------
-   GLOBAL VARIABLES
--------------------------------------------------- */
-:root {
-    --navbar-height: 60px; /* exact navbar height */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryan Banda</title>
 
-/* --------------------------------------------------
-   GLOBAL RESET + BASE STYLES
--------------------------------------------------- */
-body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    line-height: 1.7;
-    color: #222;
-}
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-h1 {
-    font-size: 42px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
+<body>
 
-h2 {
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
+    <!-- NAV BAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <span class="brand">Aryan Banda</span>
 
-/* Apply layout to all sections EXCEPT hero */
-section:not(.home-hero) {
-    padding: 120px 20px;
-    max-width: 1300px;
-    margin: auto;
-}
+            <ul class="nav-right">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="contact-btn">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-/* --------------------------------------------------
-   NAVIGATION BAR
--------------------------------------------------- */
-.navbar {
-    height: var(--navbar-height);
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+    <!-- HERO SECTION -->
+    <section class="home-hero" id="home">
+        <div class="hero-text">
+            <h1>Aryan Banda</h1>
+            <p>Student • Explorer • Creator</p>
+        </div>
+    </section>
 
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(6px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    <!-- ABOUT -->
+    <section id="about">
+        <h2>About</h2>
+        <p>
+            Write a short introduction here about Aryan — his interests, goals, academic focus,
+            and what he enjoys learning.
+        </p>
+    </section>
 
-    line-height: var(--navbar-height); /* forces exact height */
-    overflow: hidden; /* prevents stretching */
-}
+    <!-- PROJECTS -->
+    <section id="projects">
+        <h2>Projects</h2>
 
-/* Slim, clean nav bar */
-.nav-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    height: 100%; /* fills the 60px navbar */
-    padding: 0 24px; /* no vertical padding */
-    display: flex;
-    align-items: center; /* perfect vertical centering */
-}
+        <div class="projects-grid">
 
-.brand {
-    font-size: 18px; /* reduced to fit 60px height */
-    font-weight: 700;
-}
+            <a href="project1.html" target="_blank" class="project-link">
+                <div class="project-card">
+                    <img src="images/project1.jpg" alt="Project 1">
+                    <h3>Project Title 1</h3>
+                    <p>Short description of the project.</p>
+                </div>
+            </a>
 
-.nav-right {
-    list-style: none;
-    display: flex;
-    gap: 24px;
-    align-items: center;
-    margin-left: auto;
-}
+            <a href="project2.html" target="_blank" class="project-link">
+                <div class="project-card">
+                    <img src="images/project2.jpg" alt="Project 2">
+                    <h3>Project Title 2</h3>
+                    <p>Short description of the project.</p>
+                </div>
+            </a>
 
-.nav-right a {
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-    transition: 0.2s ease;
-}
+            <a href="project3.html" target="_blank" class="project-link">
+                <div class="project-card">
+                    <img src="images/project3.jpg" alt="Project 3">
+                    <h3>Project Title 3</h3>
+                    <p>Short description of the project.</p>
+                </div>
+            </a>
 
-.nav-right a:hover {
-    opacity: 0.6;
-}
+            <a href="project4.html" target="_blank" class="project-link">
+                <div class="project-card">
+                    <img src="images/project4.jpg" alt="Project 4">
+                    <h3>Project Title 4</h3>
+                    <p>Short description of the project.</p>
+                </div>
+            </a>
 
-.contact-btn {
-    padding: 6px 14px;
-    border: 1px solid black;
-    border-radius: 4px;
-    transition: 0.25s ease;
-}
+        </div>
+    </section>
 
-.contact-btn:hover {
-    background-color: black;
-    color: white;
-}
+    <!-- RESEARCH -->
+    <section id="research">
+        <h2>Research</h2>
+        <p>Coming soon.</p>
+    </section>
 
-/* --------------------------------------------------
-   HERO SECTION (FULL WIDTH + BELOW NAVBAR)
--------------------------------------------------- */
-.home-hero {
-    width: 100%;
-    height: calc(100vh - var(--navbar-height));
-    padding-top: var(--navbar-height);
+    <!-- AWARDS -->
+    <section id="awards">
+        <h2>Awards & Achievements</h2>
+        <p>
+            List academic awards, competitions, certifications, or recognitions.
+        </p>
+    </section>
 
-    background-image: url('images/Aryan.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>
+            You can add an email or a simple contact form here.
+        </p>
+    </section>
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    <!-- AUTO‑HEIGHT FIX (prevents overlap forever) -->
+    <script>
+        function updateNavbarHeight() {
+            const nav = document.querySelector('.navbar');
+            const height = nav.offsetHeight;
+            document.documentElement.style.setProperty('--navbar-height', height + 'px');
+        }
 
-    position: relative;
-}
+        window.addEventListener('load', updateNavbarHeight);
+        window.addEventListener('resize', updateNavbarHeight);
+    </script>
 
-/* Dark overlay (starts BELOW navbar) */
-.home-hero::before {
-    content: "";
-    position: absolute;
-    top: var(--navbar-height);
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.25);
-    z-index: 1;
-}
-
-/* Text on top of image */
-.hero-text {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    color: white;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
-}
-
-.hero-text h1 {
-    font-size: 60px;
-    margin-bottom: 10px;
-}
-
-.hero-text p {
-    font-size: 24px;
-}
-
-/* --------------------------------------------------
-   PROJECTS GRID
--------------------------------------------------- */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    margin-top: 40px;
-}
-
-/* Tablet */
-@media (max-width: 1000px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.project-card {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 18px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-}
-
-.project-card img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.project-card h3 {
-    margin: 10px 0 8px;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.project-card p {
-    font-size: 15px;
-    color: #555;
-}
-
-.project-link {
-    text-decoration: none;
-    color: inherit;
-}
+</body>
+</html>

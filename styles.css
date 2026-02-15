@@ -2,7 +2,7 @@
    GLOBAL VARIABLES
 -------------------------------------------------- */
 :root {
-    --navbar-height: 75px; /* single source of truth */
+    --navbar-height: 60px; /* exact navbar height */
 }
 
 /* --------------------------------------------------
@@ -50,14 +50,14 @@ section:not(.home-hero) {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+/* Slim, clean nav bar */
 .nav-container {
     max-width: 1100px;
     margin: 0 auto;
-    height: 100%; /* ensures perfect vertical centering */
-    padding: 0 24px;
-
+    height: 100%; /* fills the 60px navbar */
+    padding: 0 24px; /* no vertical padding */
     display: flex;
-    align-items: center;
+    align-items: center; /* perfect vertical centering */
 }
 
 .brand {

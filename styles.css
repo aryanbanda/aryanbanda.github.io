@@ -103,7 +103,8 @@ section:not(.home-hero) {
 .home-hero {
     width: 100%;
     height: calc(100vh - var(--navbar-height));
-    padding-top: var(--navbar-height);
+
+   padding-top: 120px; /* pushes image below navbar */
 
     background-image: url('images/Aryan.jpeg');
     background-size: cover;

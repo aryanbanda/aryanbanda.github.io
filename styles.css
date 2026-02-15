@@ -6,17 +6,11 @@ body {
     color: #222;            
 }
 
-.home-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.25); /* adjust darkness */
-}
 
-
+/* HERO SECTION */
 .home-hero {
   width: 100%;
-  height: 100vh; /* full screen */
+  height: 100vh;
   background-image: url('images/Aryan.jpeg');
   background-size: cover;
   background-position: center;
@@ -30,14 +24,21 @@ body {
   margin-top: 0;
 }
 
-.hero-text { position: relative; z-index: 2; }
-/*
+.home-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  z-index: 1;
+}
+
 .hero-text {
+  position: relative;
+  z-index: 2;
   text-align: center;
   color: white;
   text-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
-*/
 
 .hero-text h1 {
   font-size: 60px;
@@ -47,29 +48,34 @@ body {
 .hero-text p {
   font-size: 24px;
 }
-        
-/* OUTER NAV BAR */
 
+/* NAV BAR */
 .navbar {
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.5); 
-    backdrop-filter: blur(6px); 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* CENTERED CONTENT WITH CONTROLLED WIDTH */
-
 .nav-container {
-  max-width: 1100px; /* keeps content centered */
+  max-width: 1100px;
   margin: 0 auto;
   padding: 20px 32px;
   display: flex;
   align-items: center;
 }
+
+/* FIX SECTION WIDTH ISSUE */
+section:not(.home-hero) {
+  padding: 120px 20px;
+  max-width: 1300px;
+  margin: auto;
+}
+
 
 
 /* LEFT: NAME */

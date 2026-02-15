@@ -1,4 +1,11 @@
 /* --------------------------------------------------
+   GLOBAL VARIABLES
+-------------------------------------------------- */
+:root {
+    --navbar-height: 75px; /* single source of truth */
+}
+
+/* --------------------------------------------------
    GLOBAL RESET + BASE STYLES
 -------------------------------------------------- */
 body {
@@ -31,6 +38,7 @@ section:not(.home-hero) {
    NAVIGATION BAR
 -------------------------------------------------- */
 .navbar {
+    height: var(--navbar-height);
     width: 100%;
     position: fixed;
     top: 0;
@@ -42,11 +50,12 @@ section:not(.home-hero) {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Slimmer nav bar */
 .nav-container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 10px 24px; /* reduced height */
+    height: 100%; /* ensures perfect vertical centering */
+    padding: 0 24px;
+
     display: flex;
     align-items: center;
 }
@@ -88,14 +97,12 @@ section:not(.home-hero) {
 }
 
 /* --------------------------------------------------
-   HERO SECTION (FULL WIDTH)
+   HERO SECTION (FULL WIDTH + BELOW NAVBAR)
 -------------------------------------------------- */
-
-/* HERO SECTION BELOW NAV BAR */
 .home-hero {
     width: 100%;
-    height: calc(100vh - 50px); /* matches slimmer navbar */
-    padding-top: 50px; /* pushes image below navbar */
+    height: calc(100vh - var(--navbar-height));
+    padding-top: var(--navbar-height);
 
     background-image: url('images/Aryan.jpeg');
     background-size: cover;
@@ -109,11 +116,11 @@ section:not(.home-hero) {
     position: relative;
 }
 
-/* Dark overlay */
+/* Dark overlay (starts BELOW navbar) */
 .home-hero::before {
     content: "";
     position: absolute;
-    top: 50px; /* start overlay BELOW navbar */
+    top: var(--navbar-height);
     left: 0;
     right: 0;
     bottom: 0;

@@ -38,8 +38,9 @@ section:not(.home-hero) {
     left: 0;
     z-index: 1000;
 
-    background-color: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(6px);
+   background-color: rgba(255, 255, 255, 0.95);
+   backdrop-filter: blur(10px);
+
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 

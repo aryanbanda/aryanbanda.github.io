@@ -42,8 +42,7 @@ section:not(.home-hero) {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-
-/* NAV BAR (slimmer) */
+/* Slimmer nav bar */
 .nav-container {
     max-width: 1100px;
     margin: 0 auto;
@@ -92,12 +91,11 @@ section:not(.home-hero) {
    HERO SECTION (FULL WIDTH)
 -------------------------------------------------- */
 
-
 /* HERO SECTION BELOW NAV BAR */
 .home-hero {
     width: 100%;
-    height: calc(100vh - 60px); /* optional: adjusts hero height */
-    padding-top: 60px; /* pushes image below navbar */
+    height: calc(100vh - 50px); /* matches slimmer navbar */
+    padding-top: 50px; /* pushes image below navbar */
 
     background-image: url('images/Aryan.jpeg');
     background-size: cover;
@@ -115,7 +113,10 @@ section:not(.home-hero) {
 .home-hero::before {
     content: "";
     position: absolute;
-    inset: 0;
+    top: 50px; /* start overlay BELOW navbar */
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: rgba(0,0,0,0.25);
     z-index: 1;
 }
@@ -140,4 +141,59 @@ section:not(.home-hero) {
 
 /* --------------------------------------------------
    PROJECTS GRID
-------------------------------------------------
+-------------------------------------------------- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    margin: 10px 0 8px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.project-card p {
+    font-size: 15px;
+    color: #555;
+}
+
+.project-link {
+    text-decoration: none;
+    color: inherit;
+}

@@ -95,8 +95,8 @@ section:not(.home-hero) {
 -------------------------------------------------- */
 .home-hero {
     width: 100%;
-    height: calc(100vh - 120px);
-    padding-top: 120px; /* ensures hero starts below navbar */
+    height: 50vh; /* reduced height like Kavya’s */
+    padding-top: 120px; /* keeps it below navbar */
 
     background-image: url('images/Aryan.jpeg');
     background-size: cover;

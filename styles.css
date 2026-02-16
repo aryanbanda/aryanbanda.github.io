@@ -186,3 +186,34 @@ section:not(.home-hero) {
     text-decoration: none;
     color: inherit;
 }
+
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
+.site-footer {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.footer-content p {
+    margin: 6px 0;
+    color: #444;
+    font-size: 15px;
+}
+
+.footer-links a {
+    color: #444;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.footer-links a:hover {
+    opacity: 0.6;
+}
+

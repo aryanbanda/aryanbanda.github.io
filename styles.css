@@ -289,3 +289,27 @@ section:not(.home-hero) {
     border-bottom: 1px solid #333;
 }
 
+/* --------------------------------------------------
+   APPLE-STYLE SECTION BACKGROUNDS
+-------------------------------------------------- */
+
+#about {
+    background: #f7f7f7;
+}
+
+#projects {
+    background: #ffffff;
+}
+
+#research {
+    background: linear-gradient(180deg, #fafafa, #f0f0f0);
+}
+
+#awards {
+    background: #fdfcfb;
+}
+
+#contact {
+    background: #f5f5f5;
+}
+

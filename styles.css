@@ -100,7 +100,7 @@ section:not(.home-hero) {
 
     background-image: url('images/Aryan_2.png');
     background-size: cover;
-    background-position: center;
+    background-position: left center;
     background-repeat: no-repeat;
 
     display: flex;

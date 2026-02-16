@@ -156,6 +156,57 @@ section:not(.home-hero) {
     font-size: 24px;
 }
 
+/* Position bullets on top of image, toward right */
+.hero-right-bullets {
+    position: absolute;
+    right: 60px;       /* distance from right edge */
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right;
+}
+
+.hero-right-bullets ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-right-bullets li {
+    font-size: 28px;
+    font-weight: 500;
+    margin: 12px 0;
+    color: white;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.45);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Staggered animation */
+.hero-right-bullets li:nth-child(1) { animation-delay: 0.2s; }
+.hero-right-bullets li:nth-child(2) { animation-delay: 0.4s; }
+.hero-right-bullets li:nth-child(3) { animation-delay: 0.6s; }
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile layout */
+@media (max-width: 800px) {
+    .hero-right-bullets {
+        right: 0;
+        left: 0;
+        text-align: center;
+        transform: translateY(-40%);
+    }
+
+    .hero-right-bullets li {
+        font-size: 22px;
+    }
+}
+
+
 /* --------------------------------------------------
    PROJECTS GRID
 -------------------------------------------------- */

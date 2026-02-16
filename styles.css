@@ -208,6 +208,11 @@ section:not(.home-hero) {
     }
 }
 
+.small-hero {
+    height: 30vh;
+    background-position: center;
+}
+
 
 /* --------------------------------------------------
    PROJECTS GRID

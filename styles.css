@@ -28,67 +28,83 @@ section:not(.home-hero) {
 }
 
 /* --------------------------------------------------
-   NAVIGATION BAR (GLASSY)
+   NAVIGATION BAR — KAVYA STYLE (GLASSY + MINIMAL)
 -------------------------------------------------- */
 .navbar {
-    height: 60px;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
 
-    background-color: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    height: auto; /* allows natural padding */
 }
 
 .nav-container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
-    height: 100%;
-    padding: 0 24px;
+    padding: 18px 28px;
+
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
 .brand {
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    color: #222;
+    cursor: pointer;
 }
 
 .nav-right {
     list-style: none;
     display: flex;
-    gap: 24px;
+    gap: 34px; /* wider spacing like Kavya */
     align-items: center;
     margin-left: auto;
 }
 
 .nav-right a {
     text-decoration: none;
-    color: black;
-    font-weight: 500;
-    transition: 0.2s ease;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.25s ease;
+}
+
+/* Underline hover animation */
+.nav-right a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 0%;
+    height: 1.5px;
+    background: #333;
+
+    transition: width 0.28s ease;
 }
 
 .nav-right a:hover {
-    opacity: 0.6;
+    color: #000;
 }
 
-.contact-btn {
-    padding: 6px 14px;
-    border: 1px solid black;
-    border-radius: 4px;
-    transition: 0.25s ease;
+.nav-right a:hover::after {
+    width: 100%;
 }
 
-.contact-btn:hover {
-    background-color: black;
-    color: white;
-}
 
 /* --------------------------------------------------
    HERO SECTION (PADDING FIX)

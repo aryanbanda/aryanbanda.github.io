@@ -20,6 +20,22 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* Smooth anchor scroll offset */
+section {
+    scroll-margin-top: 80px;
+}
+
+/* Optional fade-in animation */
+section {
+    animation: fadeIn 0.6s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 /* Apply layout to all sections EXCEPT hero */
 section:not(.home-hero) {
     padding: 120px 20px;
@@ -32,7 +48,7 @@ section:not(.home-hero) {
 -------------------------------------------------- */
 .navbar {
     width: 100%;
-    height: 60px; /* ← back to your fixed height */
+    height: 60px;
     position: fixed;
     top: 0;
     left: 0;
@@ -48,11 +64,11 @@ section:not(.home-hero) {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    height: 100%;              /* ← fills the 60px */
-    padding: 0 24px;           /* ← like your original */
+    height: 100%;
+    padding: 0 24px;
     display: flex;
     justify-content: space-between;
-    align-items: center;       /* ← vertical centering */
+    align-items: center;
 }
 
 .brand {
@@ -61,8 +77,8 @@ section:not(.home-hero) {
     letter-spacing: 0.6px;
     color: #222;
     cursor: pointer;
-   text-decoration: none; 
-   border-bottom: none;
+    text-decoration: none;
+    border-bottom: none;
 }
 
 .nav-right {
@@ -103,14 +119,13 @@ section:not(.home-hero) {
     width: 100%;
 }
 
-
 /* --------------------------------------------------
-   HERO SECTION (PADDING FIX)
+   HERO SECTION
 -------------------------------------------------- */
 .home-hero {
     width: 100%;
-    height: 50vh; /* reduced height like Kavya’s */
-    padding-top: 120px; /* keeps it below navbar */
+    height: 50vh;
+    padding-top: 120px;
 
     background-image: url('images/Aryan_1.jpeg');
     background-size: cover;
@@ -124,7 +139,6 @@ section:not(.home-hero) {
     position: relative;
 }
 
-/* Text on top of image */
 .hero-text {
     position: relative;
     z-index: 2;
@@ -152,14 +166,12 @@ section:not(.home-hero) {
     margin-top: 40px;
 }
 
-/* Tablet */
 @media (max-width: 1000px) {
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Mobile */
 @media (max-width: 600px) {
     .projects-grid {
         grid-template-columns: 1fr;
@@ -248,7 +260,7 @@ section:not(.home-hero) {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     font-size: 22px;
     cursor: pointer;
-    display: none; /* hidden until scroll */
+    display: none;
     transition: opacity 0.3s ease, transform 0.3s ease;
     z-index: 2000;
 }
@@ -261,9 +273,19 @@ section:not(.home-hero) {
 /* --------------------------------------------------
    CONTACT SECTION — INFO ONLY
 -------------------------------------------------- */
+.contact-wrapper {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 16px;
+    padding: 40px;
+    margin-top: 30px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
 
 .contact-info-only {
-    grid-template-columns: 1fr; /* single column */
+    grid-template-columns: 1fr;
     text-align: left;
 }
 
@@ -292,7 +314,6 @@ section:not(.home-hero) {
 /* --------------------------------------------------
    APPLE-STYLE SECTION BACKGROUNDS
 -------------------------------------------------- */
-
 #about {
     background: #f7f7f7;
 }
@@ -312,4 +333,3 @@ section:not(.home-hero) {
 #contact {
     background: #f5f5f5;
 }
-

@@ -20,16 +20,12 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* Smooth anchor scroll + fade-in */
 section {
     scroll-margin-top: 80px;
     animation: fadeIn 0.6s ease forwards;
     opacity: 0;
 }
-section:not(.home-hero) {
-    max-width: 1500px;
-}
-
-
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
@@ -39,12 +35,12 @@ section:not(.home-hero) {
 /* Apply layout to all sections EXCEPT hero */
 section:not(.home-hero) {
     padding: 120px 20px;
-    max-width: 1500px;
+    max-width: 1500px;   /* unified width */
     margin: auto;
 }
 
 /* --------------------------------------------------
-   NAVIGATION BAR — KAVYA STYLE + FIXED HEIGHT
+   NAVIGATION BAR
 -------------------------------------------------- */
 .navbar {
     width: 100%;
@@ -76,9 +72,7 @@ section:not(.home-hero) {
     font-weight: 600;
     letter-spacing: 0.6px;
     color: #222;
-    cursor: pointer;
     text-decoration: none;
-    border-bottom: none;
 }
 
 .nav-right {
@@ -86,7 +80,6 @@ section:not(.home-hero) {
     display: flex;
     gap: 34px;
     align-items: center;
-    margin-left: auto;
 }
 
 .nav-right a {
@@ -157,8 +150,7 @@ section:not(.home-hero) {
     font-size: 24px;
 }
 
-/* Position bullets on top of image, toward right */
-
+/* Bullets on right side */
 .hero-right-bullets {
     position: absolute;
     right: 60px;
@@ -177,25 +169,22 @@ section:not(.home-hero) {
     font-size: 28px;
     font-weight: 500;
     margin: 12px 0;
-    color: #f2f2f2; /* keep only one */
+    color: #f2f2f2;
     text-shadow: 0 2px 8px rgba(0,0,0,0.45);
     opacity: 0;
     animation: fadeInUp 0.8s ease forwards;
 }
 
-
 .hero-right-bullets li:nth-child(1) { animation-delay: 0.2s; }
 .hero-right-bullets li:nth-child(2) { animation-delay: 0.4s; }
 .hero-right-bullets li:nth-child(3) { animation-delay: 0.6s; }
 
-
-/* Fade-in animation */
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Mobile layout */
+/* Mobile hero bullets */
 @media (max-width: 800px) {
     .hero-right-bullets {
         right: 0;
@@ -214,23 +203,22 @@ section:not(.home-hero) {
     background-position: center;
 }
 
-
 /* --------------------------------------------------
    PROJECTS GRID
 -------------------------------------------------- */
 #projects {
-   /*  max-width: 1500px; */
-    margin: auto;
+    background: #ffffff;
 }
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     margin-top: 40px;
-    justify-items: center;
-    justify-content: center; /* NEW — centers the 3 columns */
-}
 
+    justify-items: center;
+    justify-content: center; /* centers the columns */
+}
 
 @media (max-width: 1000px) {
     .projects-grid {
@@ -250,9 +238,10 @@ section:not(.home-hero) {
     padding: 18px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.06);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-   max-width: 380px; /* perfect size for 3‑wide layout */
-   width: 100%;
-   margin: auto;
+
+    max-width: 380px;
+    width: 100%;
+    margin: auto;
 }
 
 .project-card:hover {
@@ -340,7 +329,7 @@ section:not(.home-hero) {
 }
 
 /* --------------------------------------------------
-   CONTACT SECTION — INFO ONLY
+   CONTACT SECTION
 -------------------------------------------------- */
 .contact-wrapper {
     background: rgba(255, 255, 255, 0.75);
@@ -385,10 +374,6 @@ section:not(.home-hero) {
 -------------------------------------------------- */
 #about {
     background: #f7f7f7;
-}
-
-#projects {
-    background: #ffffff;
 }
 
 #research {

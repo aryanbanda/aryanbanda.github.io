@@ -217,7 +217,7 @@ section:not(.home-hero) {
     margin-top: 40px;
 
     justify-items: center;
-    justify-content: center; /* centers the columns */
+    justify-content: center;
 }
 
 @media (max-width: 1000px) {

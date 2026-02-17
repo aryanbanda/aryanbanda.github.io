@@ -213,12 +213,25 @@ section:not(.home-hero) {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 28px; /* reduced from 40px */
     margin-top: 40px;
 
     justify-items: center;
     justify-content: center;
 }
+
+.project-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    max-width: 420px; /* increased from 380px */
+    width: 100%;
+    margin: auto;
+}
+
 
 @media (max-width: 1000px) {
     .projects-grid {
@@ -232,17 +245,7 @@ section:not(.home-hero) {
     }
 }
 
-.project-card {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 18px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-    max-width: 380px;
-    width: 100%;
-    margin: auto;
-}
 
 .project-card:hover {
     transform: translateY(-6px);

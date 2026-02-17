@@ -35,7 +35,7 @@ section {
 /* Apply layout to all sections EXCEPT hero */
 section:not(.home-hero) {
     padding: 120px 20px;
-    max-width: 1500px;   /* unified width */
+    max-width: 1300px;   /* unified width */
     margin: auto;
 }
 

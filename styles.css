@@ -137,6 +137,7 @@ section:not(.home-hero) {
     align-items: center;
 
     position: relative;
+    margin-bottom: 40px;
 }
 
 .hero-text {
@@ -217,6 +218,11 @@ section:not(.home-hero) {
 /* --------------------------------------------------
    PROJECTS GRID
 -------------------------------------------------- */
+#projects {
+    max-width: 1500px;
+    margin: auto;
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -245,6 +251,7 @@ section:not(.home-hero) {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
    max-width: 380px; /* perfect size for 3‑wide layout */
    width: 100%;
+   margin: auto;
 }
 
 .project-card:hover {

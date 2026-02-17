@@ -20,16 +20,16 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Smooth anchor scroll offset */
 section {
     scroll-margin-top: 80px;
-}
-
-/* Optional fade-in animation */
-section {
     animation: fadeIn 0.6s ease forwards;
     opacity: 0;
 }
+section:not(.home-hero) {
+    max-width: 1500px;
+}
+
+
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
@@ -161,7 +161,7 @@ section:not(.home-hero) {
 
 .hero-right-bullets {
     position: absolute;
-    right: 80px;
+    right: 60px;
     top: 50%;
     transform: translateY(-50%);
     text-align: right;
@@ -174,15 +174,15 @@ section:not(.home-hero) {
 }
 
 .hero-right-bullets li {
-   color: #f2f2f2; /* or #f5d48a or #dbe9ff */
     font-size: 28px;
     font-weight: 500;
     margin: 12px 0;
-    color: white;
+    color: #f2f2f2; /* keep only one */
     text-shadow: 0 2px 8px rgba(0,0,0,0.45);
     opacity: 0;
     animation: fadeInUp 0.8s ease forwards;
 }
+
 
 .hero-right-bullets li:nth-child(1) { animation-delay: 0.2s; }
 .hero-right-bullets li:nth-child(2) { animation-delay: 0.4s; }
@@ -222,14 +222,15 @@ section:not(.home-hero) {
     max-width: 1500px;
     margin: auto;
 }
-
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 40px;
     margin-top: 40px;
-   justify-items: center; /* centers each card */
+    justify-items: center;
+    justify-content: center; /* NEW — centers the 3 columns */
 }
+
 
 @media (max-width: 1000px) {
     .projects-grid {

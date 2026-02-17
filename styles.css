@@ -39,7 +39,7 @@ section:not(.home-hero) {
 /* Apply layout to all sections EXCEPT hero */
 section:not(.home-hero) {
     padding: 120px 20px;
-    max-width: 1300px;
+    max-width: 1500px;
     margin: auto;
 }
 
@@ -219,7 +219,7 @@ section:not(.home-hero) {
    PROJECTS GRID
 -------------------------------------------------- */
 #projects {
-    max-width: 1300px;
+    max-width: 1500px;
     margin: auto;
 }
 .projects-grid {

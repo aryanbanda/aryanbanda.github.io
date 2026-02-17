@@ -219,7 +219,7 @@ section:not(.home-hero) {
    PROJECTS GRID
 -------------------------------------------------- */
 #projects {
-    max-width: 1500px;
+    max-width: 1300px;
     margin: auto;
 }
 .projects-grid {
